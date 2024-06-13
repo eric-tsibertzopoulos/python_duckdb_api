@@ -1,0 +1,5 @@
+docker build -t python-base .
+
+docker run -it --rm --name api1 python-base bash
+
+docker-compose up

@@ -1,0 +1,13 @@
+version: "3.6"
+services:
+  api1:
+    image: python-base
+    container_name: api1
+    ports:
+      - 18010:8010
+    command: gunicorn --worker-class uvicorn.workers.UvicornWorker --workers=5 --threads=5 -b 0.0.0.0:8010 server:app
+    #command: "bash"
+    volumes:
+      - ~/DEV/duckdb_api/api:/opt/workspace/api
+    environment:
+      - PYTHONUNBUFFERED=1

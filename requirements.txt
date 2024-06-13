@@ -1,0 +1,7 @@
+polars[all]
+duckdb
+s3fs
+plotly.express
+fastapi
+uvicorn
+gunicorn
